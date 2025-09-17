@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TimeVesting Frontend</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>TimeVesting Dashboard</h1>
+
+    <button id="connectWallet">Connect Wallet</button>
+    <p id="walletAddress"></p>
+
+    <div class="section">
+      <h2>Create Vesting Schedule</h2>
+      <input id="beneficiary" placeholder="Beneficiary Address" />
+      <input id="amount" placeholder="Amount" type="number" />
+      <input id="startTime" placeholder="Start Time (unix)" type="number" />
+      <input id="duration" placeholder="Duration (seconds)" type="number" />
+      <input id="contribution" placeholder="Contribution Score" type="number" />
+      <button id="createSchedule">Create</button>
+    </div>
+
+    <div class="section">
+      <h2>Check Releasable Tokens</h2>
+      <input id="checkAddress" placeholder="Beneficiary Address" />
+      <button id="checkReleasable">Check</button>
+      <p id="releasableAmount"></p>
+    </div>
+
+    <div class="section">
+      <h2>Release Tokens</h2>
+      <input id="releaseAddress" placeholder="Beneficiary Address" />
+      <button id="releaseTokens">Release</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
